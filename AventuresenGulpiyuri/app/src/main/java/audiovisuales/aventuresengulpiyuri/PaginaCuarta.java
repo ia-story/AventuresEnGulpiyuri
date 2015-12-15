@@ -1,5 +1,6 @@
 package audiovisuales.aventuresengulpiyuri;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
@@ -27,6 +28,11 @@ public class PaginaCuarta extends AppCompatActivity implements TextToSpeech.OnIn
             //Por la API mínima que usamos tenemos que usar el método deprecated
             tts.speak(getResources().getString(R.string.cuartaPaginaTTS), TextToSpeech.QUEUE_ADD, null);
         }
+    }
+
+    public void irAPagina5(View view){
+        Intent mIntent= new Intent(PaginaCuarta.this, PaginaQuinta.class);
+        startActivity(mIntent);
     }
 
     @Override

@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:src="@android:drawable/ic_media_next"
-        android:onClick="irAJuego1"
+        android:onClick="irAPagina2"
         android:layout_toEndOf="@id/etPagina1"
         android:layout_toRightOf="@id/etPagina1"
         android:layout_alignBottom="@id/etPagina1"/>
