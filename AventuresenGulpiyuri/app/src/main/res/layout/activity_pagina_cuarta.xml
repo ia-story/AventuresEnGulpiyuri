@@ -10,7 +10,7 @@
     android:background="@drawable/pergamino_medio"
     tools:context="audiovisuales.aventuresengulpiyuri.PaginaSegunda">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"

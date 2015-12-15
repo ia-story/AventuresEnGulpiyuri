@@ -6,8 +6,12 @@ import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import audiovisuales.aventuresengulpiyuri.Portada;
 import audiovisuales.aventuresengulpiyuri.R;
+import logica.Pregunta;
 
 /**
  * Created by Maria on 12/12/2015.
@@ -54,11 +58,19 @@ public class Utilidades {
                         Portada.setLecturaAutomatica(true);
                     }
                 })
-                .setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener(){
-                    public void onClick(DialogInterface dialog, int id){
+                .setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
                         Portada.setLecturaAutomatica(false);
                     }
                 })
                 .show();
+    }
+
+    public static List<Pregunta> cargarPreguntas(){
+        List<Pregunta> preguntas = new ArrayList<Pregunta>();
+        preguntas.add(new Pregunta("Na imaxe podes ver un busgosu. Según la lleenda ¿qué fai esti personaxe con cazadores y lleñadores?",
+                "Escórrelos hasta que cayen per un cantil",
+                "Convída-yos a so casa a tomar sidra", "Colgalos d\'un árbol hasta que prometen nun volver pellí",0,R.drawable.busgosu));
+        return preguntas;
     }
 }

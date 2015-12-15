@@ -10,26 +10,25 @@
     android:background="@drawable/pergamino_medio"
     tools:context="audiovisuales.aventuresengulpiyuri.JuegoPregunta">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/txPregunta"
         android:editable="false"
-        android:text="@string/pregunta"
         android:textStyle="bold"
         android:width="700dp"
         android:textSize="38dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="84dp" />
+        android:layout_marginTop="84dp"
+        tools:ignore="LabelFor" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/respuesta1"
         android:id="@+id/btRespuesta1"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
@@ -44,7 +43,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/respuesta2"
         android:id="@+id/btRespuesta2"
         android:width="700dp"
         android:textSize="30dp"
@@ -60,7 +58,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/respuesta3"
         android:id="@+id/btRespuesta3"
         android:width="700dp"
         android:textSize="30dp"
@@ -75,7 +72,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:background="@drawable/busgosu"
         android:layout_alignTop="@+id/txPregunta"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
