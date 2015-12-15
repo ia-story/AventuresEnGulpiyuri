@@ -38,6 +38,8 @@
             android:label="@string/title_activity_pagina_cuarta"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PaginaQuinta"></activity>
+        <activity android:name=".JuegoOscuridad" />
+
     </application>
 
 </manifest>
