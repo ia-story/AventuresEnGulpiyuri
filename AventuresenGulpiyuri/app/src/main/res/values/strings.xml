@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Aventures en Gulpiyuri</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_portada">Portada</string>
+    <string name="tituloFalloConexion">Error de conexión</string>
+    <string name="mensajeFalloConexion">No se ha podido establecer conexión de red.\n Algunas características pueden no estar disponibles</string>
+    <string name="ok">OK</string>
+    <string name="activarLecturaAutomatica">Lectura automática</string>
+    <string name="mensajeLecturaAutomatica">¿Desea activar la lectura automática?</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="primeraPagina">Aprovechando\'l pocu sol del branu asturianu decidisti date un bañu en Gulpiyuri, non ensin antes entrar nuna de les cueves ente les roques. Nun sabíes lo que podíes atopar y taba bien escuru, asina qu\'encendisti la llinterna.</string>
+    <!--Tiene que haber una segunda página para TTS y otra para el texto porque no pronuncia bien.
+    La que pone TTS tiene cambiadas las X que pronuncia mal por sh-->
+    <string name="segundaPaginaTTS">¡Oh, una Xana! Taba llena de feríes de tar na cueva atada, asina que coyístila en brazos pa sacala d\'ellí. Cuando salíes de la cueva, un Cuélebre selvashe apaeció y díshote daqué: “Pa que vos deshe salir d\'equí responderasme a una entruga”</string>
+    <string name="segundaPaginaTexto">¡Oh, una Xana! Taba llena de feríes de tar na cueva atada, asina que coyístila en brazos pa sacala d\'ellí.Cuando salíes de la cueva, un Cuélebre selvaxe apaeció y díxote daqué: “Pa que vos dexe salir d\'equí responderasme a una entruga”</string>
+    <!--Pasa lo mismo con la tercera, cuarta y quinta página-->
+    <string name="terceraPaginaTTS">“¡Per bién, atinasti! Podes dite, pero ties de saber que pa salvala tendrás de deshala nel mar. Si toca\'l suelu perderasla pa siempres”</string>
+    <string name="terceraPaginaTexto">“Perbién, atinasti. Podes dite, pero ties de saber que pa salvala tendrás de dexala nel mar. Si toca\'l suelu perderasla pa siempres”</string>
+    <string name="cuartaPaginaTexto">Salistis de la cueva, pero taba baxa la marea y yá casi non quedábente fuerces. De sópitu un Nuberu salió de tras de les roques.\n - Puedo consiguir que xuba la marea, pero preciso la to ayuda.</string>
+    <string name="cuartaPaginaTTS">Salistis de la cueva, pero taba basha la marea y yá casi non quedábente fuerces. De sópitu un Nuberu salió de tras de les roques.Puedo consiguir que shuba la marea, pero preciso la to ayuda.</string>
+    <string name="quintaPaginaTTS">La mar shubió y deshasti a la Xana nel mar que diote les gracies por salvala del malváu Diañu, regalote la so diadema de flores y sumió so l\'agua. Fuera una gran tarde d\'aventures, pero yá yera hora de dir a casa, asina que shirástite y abandonasti Gulpiyuri.</string>
+    <string name="quintaPaginaTexto">La mar xubió y dexasti a la Xana nel mar que diote les gracies por salvala del malváu Diañu, regalote la so diadema de flores y sumió so l\'agua. Fuera una gran tarde d\'aventures, pero yá yera hora de dir a casa, asina que xirastite y abandonasti Gulpiyuri.</string>
+    <string name="pregunta">Na imaxe podes ver un busgosu. Según la lleenda ¿qué fai esti personaxe con cazadores y lleñadores?</string>
+    <string name="respuesta1">Escórrelos hasta que cayen per un cantil</string>
+    <string name="respuesta2">Convída-yos a so casa a tomar sidra</string>
+    <string name="respuesta3">Colgalos d\'un árbol hasta que prometen nun volver pellí</string>
+    <string name="title_activity_pagina_tercera">PaginaTercera</string>
+    <string name="title_activity_pagina_cuarta">PaginaCuarta</string>
+</resources>
