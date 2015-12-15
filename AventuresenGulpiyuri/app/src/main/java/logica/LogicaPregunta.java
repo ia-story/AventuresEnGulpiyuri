@@ -28,4 +28,8 @@ public class LogicaPregunta {
     public Pregunta getPregunta(){
         return seleccionada;
     }
+
+    public boolean respuestaCorrecta(String text){
+        return (text.equals(seleccionada.getCorrecta()));
+    }
 }

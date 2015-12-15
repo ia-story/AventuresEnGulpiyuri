@@ -37,7 +37,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:background="@android:color/transparent"
-        android:onClick="irAPagina3"
+        android:onClick="comprobar"
         />
 
     <Button
@@ -52,7 +52,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@android:color/transparent"
-        android:onClick="irAPagina3"
+        android:onClick="comprobar"
         />
 
     <Button
@@ -66,7 +66,8 @@
         android:layout_marginTop="25dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/transparent" />
+        android:background="@android:color/transparent"
+        android:onClick="comprobar"/>
 
     <ImageView
         android:layout_width="wrap_content"

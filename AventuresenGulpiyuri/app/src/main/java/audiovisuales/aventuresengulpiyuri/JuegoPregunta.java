@@ -26,8 +26,11 @@ public class JuegoPregunta extends AppCompatActivity {
         ((ImageView)findViewById(R.id.imageView)).setBackgroundResource(logica.getPregunta().getImagen());
     }
 
-    public void irAPagina3(View view){
-        Intent mIntent= new Intent(JuegoPregunta.this, PaginaTercera.class);
+    public void comprobar(View view){
+        Intent mIntent=null;
+        if(logica.respuestaCorrecta(((Button)view).getText().toString())) {
+           mIntent = new Intent(JuegoPregunta.this, PaginaTercera.class);
+        }
         startActivity(mIntent);
     }
 

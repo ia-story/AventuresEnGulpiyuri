@@ -28,4 +28,8 @@ public class Pregunta {
     public String getRespuesta (int position){
         return respuestas[position];
     }
+
+    public String getCorrecta(){
+        return respuestas[correcta];
+    }
 }
