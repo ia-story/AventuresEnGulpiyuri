@@ -70,7 +70,7 @@ public class Utilidades {
         List<Pregunta> preguntas = new ArrayList<Pregunta>();
         preguntas.add(new Pregunta("Na imaxe podes ver un busgosu. Según la lleenda ¿qué fai esti personaxe con cazadores y lleñadores?",
                 "Escórrelos hasta que cayen per un cantil",
-                "Convída-yos a so casa a tomar sidra", "Colgalos d\'un árbol hasta que prometen nun volver pellí",0,R.drawable.busgosu));
+                "Convída-yos a so casa a tomar sidra", "Colgalos d\'un árbol hasta que prometen nun volver pellí", 0, R.drawable.busgosu));
         return preguntas;
     }
 }

@@ -8,29 +8,30 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/pergamino_medio"
-    tools:context="audiovisuales.aventuresengulpiyuri.PaginaSegunda">
+    tools:context="audiovisuales.aventuresengulpiyuri.PaginaCuarta">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/etPagina1"
+        android:id="@+id/etPagina4"
         android:text="@string/cuartaPaginaTexto"
-        android:textSize="57dp"
+        android:textSize="57sp"
         android:width="950dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#0b0b0b"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btSiguientePortada"
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/btSiguiente2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:src="@android:drawable/ic_media_next"
-        android:onClick="irAPagina5"
-        android:layout_alignParentBottom="true"
+        android:onClick="irAJuego3"
+        android:background="@android:drawable/ic_media_play"
+        android:layout_alignBottom="@+id/etPagina4"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="50dp"/>
+        android:layout_alignParentEnd="true"/>
 </RelativeLayout>

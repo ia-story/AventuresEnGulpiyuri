@@ -14,22 +14,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
+        android:id="@+id/etPagina2"
         android:ems="10"
-        android:id="@+id/etPagina1"
         android:text="@string/segundaPaginaTexto"
-        android:textSize="57dp"
+        android:textSize="57sp"
         android:width="950dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#0b0b0b"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btSiguientePortada"
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/btSiguiente2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:src="@android:drawable/ic_media_next"
         android:onClick="irAJuego2"
-        android:layout_toEndOf="@id/etPagina1"
-        android:layout_toRightOf="@id/etPagina1"
-        android:layout_alignBottom="@id/etPagina1"/>
+        android:background="@android:drawable/ic_media_play"
+        android:layout_alignBottom="@+id/etPagina2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
 </RelativeLayout>
