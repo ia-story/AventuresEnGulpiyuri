@@ -1,9 +1,13 @@
 package audiovisuales.aventuresengulpiyuri;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,7 +20,12 @@ public class JuegoPregunta extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_juego_pregunta);
         logica=LogicaPregunta.getInstance();
         ((TextView)findViewById(R.id.txPregunta)).setText(logica.getPregunta().getEnunciado());
@@ -31,6 +40,22 @@ public class JuegoPregunta extends ActionBarActivity {
         if(logica.respuestaCorrecta(((Button)view).getText().toString())) {
             mIntent = new Intent(JuegoPregunta.this, PaginaTercera.class);
         }
-        startActivity(mIntent);
+        if(mIntent != null) {
+            startActivity(mIntent);
+            finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
+        }
+        else
+        {
+            AlertDialog ad = new AlertDialog.Builder(this).create();
+            ad.setCancelable(false);
+            ad.setMessage("Respuesta incorrecta");
+            ad.setButton("Intentar de nuevo", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            ad.show();
+        }
     }
 }

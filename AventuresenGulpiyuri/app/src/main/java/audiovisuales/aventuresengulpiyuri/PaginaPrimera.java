@@ -5,6 +5,8 @@ import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import util.Utilidades;
 
@@ -13,7 +15,12 @@ public class PaginaPrimera extends ActionBarActivity implements TextToSpeech.OnI
     private TextToSpeech tts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_pagina_primera);
         if (!Utilidades.verificaConexion(this)){
             Utilidades.mostrarVentanaErrorDeConexion(this);
@@ -30,6 +37,7 @@ public class PaginaPrimera extends ActionBarActivity implements TextToSpeech.OnI
         Intent mIntent = new Intent(PaginaPrimera.this, PaginaSegunda.class);
         startActivity(mIntent);
 
+        finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
     }
 
     @Override
