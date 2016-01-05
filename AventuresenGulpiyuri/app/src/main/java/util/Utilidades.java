@@ -1,10 +1,12 @@
 package util;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.speech.tts.TextToSpeech;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import logica.Pregunta;
  * Created by Maria on 12/12/2015.
  */
 public class Utilidades {
+
     public static boolean verificaConexion(Context ctx) {
         boolean bConectado = false;
         ConnectivityManager connec = (ConnectivityManager) ctx

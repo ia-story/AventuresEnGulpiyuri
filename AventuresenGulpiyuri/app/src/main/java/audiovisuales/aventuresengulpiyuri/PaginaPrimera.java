@@ -1,6 +1,8 @@
 package audiovisuales.aventuresengulpiyuri;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,11 +10,15 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.util.HashMap;
+import java.util.Locale;
+
 import util.Utilidades;
 
-public class PaginaPrimera extends ActionBarActivity implements TextToSpeech.OnInitListener{
-
+public class PaginaPrimera extends ActionBarActivity{
     private TextToSpeech tts;
+    private boolean iniciado = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -27,8 +33,11 @@ public class PaginaPrimera extends ActionBarActivity implements TextToSpeech.OnI
         }
         //SIGUE SIN FUNCIONAR, NO VEO EL FALLO
         else if(Portada.getLecturaAutomatica()){
-            tts = new TextToSpeech(this, this);
-            tts.speak(getResources().getString(R.string.primeraPagina), TextToSpeech.QUEUE_ADD, null);
+           tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+               @Override
+               public void onInit(int status) {
+                   tts.speak(getResources().getString(R.string.primeraPagina), TextToSpeech.QUEUE_ADD, null);
+               }});
         }
     }
 
@@ -39,7 +48,4 @@ public class PaginaPrimera extends ActionBarActivity implements TextToSpeech.OnI
 
         finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
     }
-
-    @Override
-    public void onInit(int status) {}
 }
