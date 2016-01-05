@@ -73,4 +73,16 @@ public class Utilidades {
                 "Convída-yos a so casa a tomar sidra", "Colgalos d\'un árbol hasta que prometen nun volver pellí", 0, R.drawable.busgosu));
         return preguntas;
     }
+
+    public static void preguntaFallada(Context context){
+        new AlertDialog.Builder(context)
+                .setTitle(R.string.entrugaIncorreuta)
+                .setMessage(R.string.pruebaOtraVez)
+                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+    }
 }

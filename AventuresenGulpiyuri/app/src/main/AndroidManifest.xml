@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.BIND_VOICE_INTERACTION" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -41,15 +41,21 @@
             android:name=".PaginaTercera"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".PaginaCuarta"
+        <activity
+            android:name=".PaginaCuarta"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".PaginaQuinta"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Fin"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".JuegoGestos"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".PaginaQuinta"
-            android:screenOrientation="landscape"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".Fin"
-            android:screenOrientation="landscape"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

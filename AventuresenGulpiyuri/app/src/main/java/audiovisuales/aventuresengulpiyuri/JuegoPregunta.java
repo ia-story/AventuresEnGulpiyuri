@@ -46,16 +46,15 @@ public class JuegoPregunta extends ActionBarActivity {
         }
         else
         {
-            AlertDialog ad = new AlertDialog.Builder(this).create();
-            ad.setCancelable(false);
-            ad.setMessage("Respuesta incorrecta");
-            ad.setButton("Intentar de nuevo", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
-            ad.show();
+            new AlertDialog.Builder(this)
+                    .setTitle(R.string.entrugaIncorreuta)
+                    .setMessage(R.string.pruebaOtraVez)
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .show();
         }
     }
 }

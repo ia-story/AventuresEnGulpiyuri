@@ -1,7 +1,9 @@
 package audiovisuales.aventuresengulpiyuri;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -21,5 +23,11 @@ public class PaginaQuinta extends ActionBarActivity {
         if (!Utilidades.verificaConexion(this)){
             Utilidades.mostrarVentanaErrorDeConexion(this);
         }
+    }
+
+    public void irAFin(View view){
+        Intent mIntent = new Intent(PaginaQuinta.this, Fin.class);
+        startActivity(mIntent);
+        finish();
     }
 }

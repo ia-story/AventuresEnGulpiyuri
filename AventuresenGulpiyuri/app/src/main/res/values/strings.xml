@@ -27,4 +27,10 @@
     <string name="title_activity_pagina_tercera">PaginaTercera</string>
     <string name="title_activity_pagina_cuarta">PaginaCuarta</string>
     <string name="fin">FIN</string>
+    <string name ="entrugaIncorreuta">Respuesta incorreuta</string>
+    <string name="pruebaOtraVez">Nun ye correuto!! Xuega otra vegada.</string>
+    <string name="irreconocible">Non t\'entiendo</string>
+    <string name="escribeOtraVez">Vas tener que dicime el númberu otra vegada</string>
+    <string name="enunciadoJuego3">Escribe\'l númberu de llavanderes que ves na imaxe</string>
+    <string name="TituloJuego3">Demasiaes llavanderes</string>
 </resources>
