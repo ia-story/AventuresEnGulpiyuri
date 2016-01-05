@@ -34,6 +34,7 @@ public class PaginaPrimera extends ActionBarActivity{
            tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
                @Override
                public void onInit(int status) {
+                   tts.setSpeechRate(Float.valueOf("0.90"));
                    tts.speak(getResources().getString(R.string.primeraPagina), TextToSpeech.QUEUE_ADD, null);
                }});
         }
@@ -46,5 +47,11 @@ public class PaginaPrimera extends ActionBarActivity{
         startActivity(mIntent);
 
         finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
+    }
+
+    @Override
+    public void onBackPressed() {
+        tts.stop();
+        finish();
     }
 }

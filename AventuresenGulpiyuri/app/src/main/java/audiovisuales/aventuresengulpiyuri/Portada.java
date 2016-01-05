@@ -1,6 +1,9 @@
 package audiovisuales.aventuresengulpiyuri;
 
+import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -29,13 +32,10 @@ public class Portada extends ActionBarActivity {
         Intent mIntent=new Intent(Portada.this, PaginaPrimera.class);
         startActivity(mIntent);
 
-        finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
+        finish();
     }
 
-    public static void setLecturaAutomatica (boolean activado){
-        lecturaAutomatica=activado;
-    }
-    public static boolean getLecturaAutomatica(){
-        return lecturaAutomatica;
-    }
+    public static void setLecturaAutomatica (boolean activado){lecturaAutomatica=activado;}
+    public static boolean getLecturaAutomatica(){return lecturaAutomatica;}
+
 }
