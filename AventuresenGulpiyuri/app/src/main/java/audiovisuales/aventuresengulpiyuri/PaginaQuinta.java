@@ -1,6 +1,7 @@
 package audiovisuales.aventuresengulpiyuri;
 
 import android.content.Intent;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.view.WindowManager;
 import util.Utilidades;
 
 public class PaginaQuinta extends ActionBarActivity {
+
+    private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +26,18 @@ public class PaginaQuinta extends ActionBarActivity {
         if (!Utilidades.verificaConexion(this)){
             Utilidades.mostrarVentanaErrorDeConexion(this);
         }
+        else if(Portada.getLecturaAutomatica()){
+            tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int status) {
+                    tts.speak(getResources().getString(R.string.quintaPaginaTTS), TextToSpeech.QUEUE_ADD, null);
+                }});
+        }
     }
 
     public void irAFin(View view){
         Intent mIntent = new Intent(PaginaQuinta.this, Fin.class);
+        tts.stop();
         startActivity(mIntent);
         finish();
     }

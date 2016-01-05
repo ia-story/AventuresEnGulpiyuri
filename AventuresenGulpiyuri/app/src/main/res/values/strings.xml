@@ -9,6 +9,8 @@
     <string name="mensajeLecturaAutomatica">¿Desea activar la lectura automática?</string>
     <string name="cancelar">Cancelar</string>
     <string name="primeraPagina">Aprovechando\'l pocu sol del branu asturianu decidisti date un bañu en Gulpiyuri, non ensin antes entrar nuna de les cueves ente les roques. Nun sabíes lo que podíes atopar y taba bien escuru, asina qu\'encendisti la llinterna.</string>
+    <string name="primeraPaginaTTS">Aprovechándol pocu sol del branu asturianu, decidisti date un bañu en Gulpiyuri, non ensin antes entrar nuna de les cueves ente les roques. Nun sabíes lo que podíes atopar y taba bien escúru, asina qu\'encendisti la llinterna.</string>
+
     <!--Tiene que haber una segunda página para TTS y otra para el texto porque no pronuncia bien.
     La que pone TTS tiene cambiadas las X que pronuncia mal por sh-->
     <string name="segundaPaginaTTS">¡Oh, una Xana! Taba llena de feríes de tar na cueva atada, asina que coyístila en brazos pa sacala d\'ellí. Cuando salíes de la cueva, un Cuélebre selvashe apaeció y díshote daqué: “Pa que vos deshe salir d\'equí responderasme a una entruga”</string>

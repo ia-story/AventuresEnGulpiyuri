@@ -17,7 +17,6 @@ import util.Utilidades;
 
 public class PaginaPrimera extends ActionBarActivity{
     private TextToSpeech tts;
-    private boolean iniciado = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,6 @@ public class PaginaPrimera extends ActionBarActivity{
         if (!Utilidades.verificaConexion(this)){
             Utilidades.mostrarVentanaErrorDeConexion(this);
         }
-        //SIGUE SIN FUNCIONAR, NO VEO EL FALLO
         else if(Portada.getLecturaAutomatica()){
            tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
                @Override
@@ -44,6 +42,7 @@ public class PaginaPrimera extends ActionBarActivity{
     public void pasaPagina(View view){
         //Hay que cambiarlo para que vaya a la página del juego de la linterna
         Intent mIntent = new Intent(PaginaPrimera.this, PaginaSegunda.class);
+        tts.stop();
         startActivity(mIntent);
 
         finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
