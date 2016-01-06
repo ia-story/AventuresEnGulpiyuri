@@ -30,7 +30,7 @@ public class PaginaSegunda extends ActionBarActivity {
             tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int status) {
-                    tts.setSpeechRate(Float.valueOf("0.90"));
+                    tts.setSpeechRate(Float.valueOf("0.95"));
                     tts.speak(getResources().getString(R.string.segundaPaginaTTS), TextToSpeech.QUEUE_ADD, null);
                 }});
         }
@@ -38,9 +38,16 @@ public class PaginaSegunda extends ActionBarActivity {
 
     public void irAJuego2(View view){
         Intent mIntent= new Intent(PaginaSegunda.this, JuegoPregunta.class);
-        tts.stop();
+        if (tts!=null)
+            tts.stop();
         startActivity(mIntent);
+        finish();
+    }
 
+    @Override
+    public void onBackPressed() {
+        if (tts!=null)
+            tts.stop();
         finish();
     }
 }

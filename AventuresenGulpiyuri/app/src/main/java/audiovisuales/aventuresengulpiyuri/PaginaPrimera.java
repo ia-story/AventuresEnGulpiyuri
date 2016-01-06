@@ -34,7 +34,7 @@ public class PaginaPrimera extends ActionBarActivity{
            tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
                @Override
                public void onInit(int status) {
-                   tts.setSpeechRate(Float.valueOf("0.90"));
+                   tts.setSpeechRate(Float.valueOf("0.95"));
                    tts.speak(getResources().getString(R.string.primeraPagina), TextToSpeech.QUEUE_ADD, null);
                }});
         }
@@ -43,7 +43,8 @@ public class PaginaPrimera extends ActionBarActivity{
     public void pasaPagina(View view){
         //Hay que cambiarlo para que vaya a la página del juego de la linterna
         Intent mIntent = new Intent(PaginaPrimera.this, PaginaSegunda.class);
-        tts.stop();
+        if (tts!=null)
+            tts.stop();
         startActivity(mIntent);
 
         finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
@@ -51,7 +52,8 @@ public class PaginaPrimera extends ActionBarActivity{
 
     @Override
     public void onBackPressed() {
-        tts.stop();
+        if (tts!=null)
+            tts.stop();
         finish();
     }
 }

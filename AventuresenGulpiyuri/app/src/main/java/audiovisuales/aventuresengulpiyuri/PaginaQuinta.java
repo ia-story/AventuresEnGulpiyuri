@@ -30,7 +30,7 @@ public class PaginaQuinta extends ActionBarActivity {
             tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int status) {
-                    tts.setSpeechRate(Float.valueOf("0.90"));
+                    tts.setSpeechRate(Float.valueOf("0.95"));
                     tts.speak(getResources().getString(R.string.quintaPaginaTTS), TextToSpeech.QUEUE_ADD, null);
                 }});
         }
@@ -38,8 +38,16 @@ public class PaginaQuinta extends ActionBarActivity {
 
     public void irAFin(View view){
         Intent mIntent = new Intent(PaginaQuinta.this, Fin.class);
-        tts.stop();
+        if (tts!=null)
+            tts.stop();
         startActivity(mIntent);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (tts!=null)
+            tts.stop();
         finish();
     }
 }

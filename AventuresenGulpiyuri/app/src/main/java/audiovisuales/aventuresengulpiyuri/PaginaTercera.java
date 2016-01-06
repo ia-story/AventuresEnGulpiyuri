@@ -33,7 +33,7 @@ public class PaginaTercera extends ActionBarActivity {
             tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
                 @Override
                 public void onInit(int status) {
-                    tts.setSpeechRate(Float.valueOf("0.90"));
+                    tts.setSpeechRate(Float.valueOf("0.95"));
                     tts.speak(getResources().getString(R.string.terceraPaginaTTS), TextToSpeech.QUEUE_ADD, null);
                 }});
         }
@@ -42,7 +42,15 @@ public class PaginaTercera extends ActionBarActivity {
     public void irAPagina4(View view){
         Intent mIntent = new Intent(PaginaTercera.this, PaginaCuarta.class);
         startActivity(mIntent);
-
+        if (tts!=null)
+            tts.stop();
         finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (tts!=null)
+            tts.stop();
+        finish();
     }
 }
