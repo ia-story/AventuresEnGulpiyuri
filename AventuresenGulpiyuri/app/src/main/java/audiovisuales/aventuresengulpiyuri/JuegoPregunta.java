@@ -42,6 +42,7 @@ public class JuegoPregunta extends ActionBarActivity {
         }
         if(mIntent != null) {
             startActivity(mIntent);
+            overridePendingTransition(R.anim.left_in, R.anim.left_out);
             finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
         }
         else

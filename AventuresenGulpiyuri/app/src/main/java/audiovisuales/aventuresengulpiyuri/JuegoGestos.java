@@ -76,6 +76,7 @@ public class JuegoGestos extends ActionBarActivity implements GestureOverlayView
     private void cambiarDePagina(){
         Intent mIntenn = new Intent(JuegoGestos.this, PaginaQuinta.class);
         startActivity(mIntenn);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
         finish();
     }
 }

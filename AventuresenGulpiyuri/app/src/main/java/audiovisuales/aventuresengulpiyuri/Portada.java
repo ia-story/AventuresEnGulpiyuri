@@ -31,6 +31,7 @@ public class Portada extends ActionBarActivity {
     public void pasaPagina(View view){
         Intent mIntent=new Intent(Portada.this, PaginaPrimera.class);
         startActivity(mIntent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
 
         finish();
     }

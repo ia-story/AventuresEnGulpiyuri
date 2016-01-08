@@ -42,6 +42,7 @@ public class PaginaTercera extends ActionBarActivity {
     public void irAPagina4(View view){
         Intent mIntent = new Intent(PaginaTercera.this, PaginaCuarta.class);
         startActivity(mIntent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
         if (tts!=null)
             tts.stop();
         finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras

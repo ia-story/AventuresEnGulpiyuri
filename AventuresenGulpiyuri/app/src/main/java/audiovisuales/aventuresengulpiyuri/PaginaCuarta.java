@@ -41,6 +41,7 @@ public class PaginaCuarta extends ActionBarActivity {
         if (tts!=null)
             tts.stop();
         startActivity(mIntent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
         finish();
     }
 
