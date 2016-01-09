@@ -1,17 +1,12 @@
 package audiovisuales.aventuresengulpiyuri;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-
-import java.util.HashMap;
-import java.util.Locale;
 
 import util.Utilidades;
 
@@ -42,7 +37,7 @@ public class PaginaPrimera extends ActionBarActivity{
 
     public void pasaPagina(View view){
         //Hay que cambiarlo para que vaya a la página del juego de la linterna
-        Intent mIntent = new Intent(PaginaPrimera.this, PaginaSegunda.class);
+        Intent mIntent = new Intent(PaginaPrimera.this, JuegoOscuridad.class);
         if (tts!=null)
             tts.stop();
         startActivity(mIntent);

@@ -57,6 +57,9 @@
             android:name=".JuegoGestos"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".JuegoOscuridad"
+            android:label="@string/title_activity_oscuridad"></activity>
     </application>
 
 </manifest>

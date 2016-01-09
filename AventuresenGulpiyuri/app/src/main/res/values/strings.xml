@@ -35,4 +35,5 @@
     <string name="escribeOtraVez">Vas tener que dicime el númberu otra vegada</string>
     <string name="enunciadoJuego3">Escribe\'l númberu de sumicius que ves na imaxe</string>
     <string name="TituloJuego3">Demasiaos sumicius</string>
+    <string name="title_activity_oscuridad">Oscuridad</string>
 </resources>
