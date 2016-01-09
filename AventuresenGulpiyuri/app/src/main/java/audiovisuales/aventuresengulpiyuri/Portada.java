@@ -14,8 +14,6 @@ import util.Utilidades;
 
 public class Portada extends ActionBarActivity {
 
-    private static boolean lecturaAutomatica=false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -36,7 +34,5 @@ public class Portada extends ActionBarActivity {
         finish();
     }
 
-    public static void setLecturaAutomatica (boolean activado){lecturaAutomatica=activado;}
-    public static boolean getLecturaAutomatica(){return lecturaAutomatica;}
 
 }

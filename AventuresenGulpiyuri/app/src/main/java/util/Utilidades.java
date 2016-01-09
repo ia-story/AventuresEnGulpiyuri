@@ -20,6 +20,8 @@ import logica.Pregunta;
  */
 public class Utilidades {
 
+    private static Configuracion conf = Configuracion.getInstance();
+
     public static boolean verificaConexion(Context ctx) {
         boolean bConectado = false;
         ConnectivityManager connec = (ConnectivityManager) ctx
@@ -39,13 +41,32 @@ public class Utilidades {
 
     /* Diálogo que se mostrará cada vez que se abre una nueva página y no se detecta coe
      */
-    public static void mostrarVentanaErrorDeConexion(Context context) {
+    public static void mostrarVentanaErrorDeConexion(final Context context) {
         new AlertDialog.Builder(context)
                 .setTitle(R.string.tituloFalloConexion)
                 .setMessage(R.string.mensajeFalloConexion)
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        mostrarVentanaRepetirAviso(context);
                         dialog.cancel();
+                    }
+                })
+                .show();
+    }
+
+    private static void mostrarVentanaRepetirAviso(Context context) {
+        new AlertDialog.Builder(context)
+                .setMessage(R.string.volverAVerMensaje)
+                .setPositiveButton(R.string.repetir, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        conf.setRepetirAviso(true);
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton(R.string.noMostrarMas, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id){
+                        conf.setRepetirAviso(false);
+                        dialog.dismiss();
                     }
                 })
                 .show();
@@ -58,12 +79,12 @@ public class Utilidades {
                 .setMessage(R.string.mensajeLecturaAutomatica)
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Portada.setLecturaAutomatica(true);
+                        conf.setLecturaAutomatica(true);
                     }
                 })
                 .setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Portada.setLecturaAutomatica(false);
+                        conf.setLecturaAutomatica(false);
                     }
                 })
                 .show();

@@ -1,7 +1,9 @@
 package audiovisuales.aventuresengulpiyuri;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -112,23 +114,39 @@ public class JuegoOscuridad extends Activity {
             c2.drawBitmap(overlayDefault, 0, 0, null); //exclude this line to show all as you draw
             c2.drawCircle(X, Y, 80, pTouch);
             //draw the overlay over the background
-            canvas.drawBitmap(overlay_mutable, 0, 0, null);
+            canvas.drawBitmap
+                    (overlay_mutable, 0, 0, null);
             if(X>(0.7*width) && X < (0.74*width) && Y>(0.26*height) && Y < (0.32*height))
                 pasaPagina();
 
         }
 
-        public void pasaPagina(){
-            //Hay que cambiarlo para que vaya a la página del juego de la linterna
-            Intent mIntent = new Intent(JuegoOscuridad.this, PaginaSegunda.class);
-
-            startActivity(mIntent);
-            overridePendingTransition(R.anim.left_in, R.anim.left_out);
-
-            finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
-        }
-
-
     }
 
+    public void pasaPagina(){
+        //Hay que cambiarlo para que vaya a la página del juego de la linterna
+        Intent mIntent = new Intent(JuegoOscuridad.this, PaginaSegunda.class);
+
+        startActivity(mIntent);
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+
+        finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage(R.string.salirOSiguiente)
+                .setPositiveButton(R.string.siguiente, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        pasaPagina();
+                    }
+                })
+                .setNegativeButton(R.string.salir, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                })
+                .show();
+    }
 }

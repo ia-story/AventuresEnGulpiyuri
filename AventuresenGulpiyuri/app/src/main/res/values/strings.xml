@@ -36,4 +36,10 @@
     <string name="enunciadoJuego3">Escribe\'l númberu de sumicius que ves na imaxe</string>
     <string name="TituloJuego3">Demasiaos sumicius</string>
     <string name="title_activity_oscuridad">Oscuridad</string>
+    <string name="salirOSiguiente">¿Quies salir o dir a la siguiente páxina?</string>
+    <string name="siguiente">Siguiente páxina</string>
+    <string name="salir">salir</string>
+    <string name="volverAVerMensaje">¿Quies volver ver esti mesaje cuándo nun tengas conexón?</string>
+    <string name="repetir">Repitir</string>
+    <string name="noMostrarMas">Nun volver amosar</string>
 </resources>
