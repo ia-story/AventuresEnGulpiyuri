@@ -20,8 +20,8 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class JuegoOscuridad extends Activity {
-    double factorX = 1;
-    double factorY = 1;
+    int width = 1;
+    int height = 1;
 
 
     @Override
@@ -49,15 +49,11 @@ public class JuegoOscuridad extends Activity {
             Display display = getWindowManager().getDefaultDisplay();
             Point size = new Point();
             display.getSize(size);
-            int width = size.x;
-            int height = size.y;
+            width = size.x;
+            height = size.y;
 
             bgr = BitmapFactory.decodeResource(getResources(), R.drawable.xana);
-            factorX = bgr.getWidth();
-            factorY = bgr.getHeight();
             bgr = Bitmap.createScaledBitmap(bgr, width, height, false);
-            factorX = bgr.getWidth()/factorX;
-            factorY = bgr.getHeight()/factorY;
             overlayDefault =     BitmapFactory.decodeResource(getResources(), R.drawable.oscuridad);
             overlayDefault = Bitmap.createScaledBitmap(overlayDefault, width, height, false);
             overlay_mutable = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);  // convert to ARGB_8888 format,only den can it be put on canvas in next line..
@@ -117,7 +113,7 @@ public class JuegoOscuridad extends Activity {
             c2.drawCircle(X, Y, 80, pTouch);
             //draw the overlay over the background
             canvas.drawBitmap(overlay_mutable, 0, 0, null);
-            if(X>(490*factorX) && X < (520*factorX) && Y>(130*factorY) && Y < (160*factorY))
+            if(X>(0.7*width) && X < (0.74*width) && Y>(0.26*height) && Y < (0.32*height))
                 pasaPagina();
 
         }
