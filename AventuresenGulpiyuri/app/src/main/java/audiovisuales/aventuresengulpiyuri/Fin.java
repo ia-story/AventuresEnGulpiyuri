@@ -39,4 +39,11 @@ public class Fin extends ActionBarActivity {
             }
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        if (tts!=null)
+            tts.stop();
+        finish();
+    }
 }

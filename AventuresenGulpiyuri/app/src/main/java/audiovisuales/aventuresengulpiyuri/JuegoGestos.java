@@ -54,7 +54,6 @@ public class JuegoGestos extends ActionBarActivity implements GestureOverlayView
         if (predictions.size()>0){
             Prediction prediction = predictions.get(0);
             if (prediction.score > 1.5) {
-               Toast.makeText(this,prediction.name,Toast.LENGTH_LONG).show();
                if (prediction.name.equals("6"))
                     cambiarDePagina();
                 else
@@ -77,6 +76,11 @@ public class JuegoGestos extends ActionBarActivity implements GestureOverlayView
         Intent mIntenn = new Intent(JuegoGestos.this, PaginaQuinta.class);
         startActivity(mIntenn);
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
         finish();
     }
 }

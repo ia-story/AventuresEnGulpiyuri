@@ -36,15 +36,8 @@ public class JuegoPregunta extends ActionBarActivity {
     }
 
     public void comprobar(View view){
-        Intent mIntent=null;
-        if(logica.respuestaCorrecta(((Button)view).getText().toString())) {
-            mIntent = new Intent(JuegoPregunta.this, PaginaTercera.class);
-        }
-        if(mIntent != null) {
-            startActivity(mIntent);
-            overridePendingTransition(R.anim.left_in, R.anim.left_out);
-            finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
-        }
+        if(logica.respuestaCorrecta(((Button)view).getText().toString()))
+            cambiaPagina();
         else
         {
             new AlertDialog.Builder(this)
@@ -57,5 +50,19 @@ public class JuegoPregunta extends ActionBarActivity {
                     })
                     .show();
         }
+    }
+
+    private void cambiaPagina(){
+        Intent mIntent = new Intent(JuegoPregunta.this, PaginaTercera.class);
+        if(mIntent != null) {
+            startActivity(mIntent);
+            overridePendingTransition(R.anim.left_in, R.anim.left_out);
+            finish(); // Cierra la actividad actual, si no se van acumulando unas encima de otras
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }
