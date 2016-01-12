@@ -33,7 +33,7 @@ public class Fin extends ActionBarActivity {
                     @Override
                     public void onInit(int status) {
                         tts.setSpeechRate(Float.valueOf("0.95"));
-                        tts.speak(getResources().getString(R.string.fin), TextToSpeech.QUEUE_ADD, null);
+                        tts.speak(getResources().getString(R.string.fin), TextToSpeech.QUEUE_FLUSH, null);
                     }
                 });
             }

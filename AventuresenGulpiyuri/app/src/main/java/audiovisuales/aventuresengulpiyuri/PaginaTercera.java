@@ -38,7 +38,7 @@ public class PaginaTercera extends ActionBarActivity {
                     @Override
                     public void onInit(int status) {
                         tts.setSpeechRate(Float.valueOf("0.95"));
-                        tts.speak(getResources().getString(R.string.terceraPaginaTTS), TextToSpeech.QUEUE_ADD, null);
+                        tts.speak(getResources().getString(R.string.terceraPaginaTTS), TextToSpeech.QUEUE_FLUSH, null);
                     }
                 });
             }

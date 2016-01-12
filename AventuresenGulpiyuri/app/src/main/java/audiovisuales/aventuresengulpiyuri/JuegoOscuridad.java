@@ -24,6 +24,7 @@ import android.view.WindowManager;
 public class JuegoOscuridad extends Activity {
     int width = 1;
     int height = 1;
+    private boolean paginaPasada = false;
 
 
     @Override
@@ -116,8 +117,10 @@ public class JuegoOscuridad extends Activity {
             //draw the overlay over the background
             canvas.drawBitmap
                     (overlay_mutable, 0, 0, null);
-            if(X>(0.7*width) && X < (0.74*width) && Y>(0.26*height) && Y < (0.32*height))
+            if(X>(0.7*width) && X < (0.74*width) && Y>(0.26*height) && Y < (0.32*height) && !paginaPasada) {
+                paginaPasada = true;
                 pasaPagina();
+            }
 
         }
 
