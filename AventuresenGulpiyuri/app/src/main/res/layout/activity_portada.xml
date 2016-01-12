@@ -23,4 +23,17 @@
         android:layout_marginEnd="84dp"
         android:background="@android:drawable/ic_media_play" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:ems="10"
+        android:text="@string/app_name"
+        android:textSize="150sp"
+        android:width="950dp"
+        android:textColor="#0b0b0b"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
